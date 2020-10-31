@@ -18,7 +18,7 @@ function doTruncarStr(str) {
 }
 
 const CardView = ({ item, onPress, style }) => (
-  <View style={[styles.card, style]}>
+  <View style={[styles.card,style]}>
 
     <View style={styles.textView}>
       <Text style={styles.title}>{item.nome}</Text>
@@ -61,8 +61,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginBottom: 20,
     minHeight: 160,
-    //maxWidth: 327,
-    //marginRight: 20, //precisa desses dois para slide lateral
     justifyContent: 'space-between'
   },
 

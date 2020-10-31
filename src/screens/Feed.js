@@ -20,7 +20,7 @@ export default class Feed extends Component {
   moreInformation = () => this.props.navigation.navigate('Projetos');
 
   renderItem = ({ item }) => (
-    <CardView style={{marginRight: 20}} item={item} onPress={this.moreInformation} />
+    <CardView item={item} onPress={this.moreInformation} />
   )
 
   render() {
