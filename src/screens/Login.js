@@ -40,7 +40,7 @@ export default class Login extends Component {
             <TextInput
               style={styles.input}
               onChangeText={text => this.onUserChange(text)}
-              value={this.state.value}
+              value={this.state.user}
               placeholder={"Usuário"}
             />
 

@@ -7,42 +7,67 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import Projetos from './Projetos'
+import CriarProjetos from './Projetos'
 import Login from './Login'
 import Feed from './Feed'
 import Perfil from './Perfil'
-import CriarProjeto from './CriarProjeto'
+import Projeto from './CriarProjeto'
 
 import Colors from '../styles/Colors'
 
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
+function StackSeeProject() {
+
+  return (
+    <Stack.Navigator initialRouteName="Login">
+
+      <Stack.Screen
+        name="SeeProject"
+        component={Feed}
+        options={{
+          headerShown: false
+        }}
+      />
+
+      <Stack.Screen
+        name="Projetos"
+        component={Projeto}
+        options={{
+          headerShown: false
+        }}
+      />
+    </Stack.Navigator>
+  )
+
+}
+
 function TabNavigator() {
   return (
     <Tab.Navigator
       barStyle={{
         backgroundColor: 'white',
-        borderTopWidth:2,
-        borderColor:Colors.primaryColor
-        
+        borderTopWidth: 2,
+        borderColor: Colors.primaryColor
+
       }}
     >
 
       <Tab.Screen
         name="CriarProjeto"
-        component={Projetos}
+        component={CriarProjetos}
         options={{
           tabBarLabel: false,
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="plus-box" color={color} size={30}/>
+            <MaterialCommunityIcons name="plus-box" color={color} size={30} />
           )
         }}
       />
 
       <Tab.Screen
         name="Feed"
-        component={Feed}
+        component={StackSeeProject}
         options={{
           tabBarLabel: false,
           tabBarIcon: ({ color }) => (
@@ -63,7 +88,6 @@ function TabNavigator() {
 
       />
 
-
     </Tab.Navigator>
   );
 }
@@ -77,13 +101,16 @@ export default function StackNavigator() {
         name="Login"
         component={Login}
         options={{
-          headerShown:false
+          headerShown: false
         }}
       />
 
       <Stack.Screen
         name="Tab"
         component={TabNavigator}
+        options={{
+          headerShown: false
+        }}
       />
 
     </Stack.Navigator>
