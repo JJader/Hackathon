@@ -1,11 +1,24 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, StatusBar, Image } from 'react-native'
 
-export default class screeTeste extends Component {
+import Colors from '../styles/Colors';
+import styles from '../styles/styles'
+
+export default class Projetos extends Component {
   render() {
     return (
       <View>
-        <Text> textInComponent </Text>
+        <View>
+          <StatusBar backgroundColor={Colors.primaryColor} />
+          <Text>Icone de voltar</Text>
+        </View>
+
+        <View>
+          <Image
+            style={styles.imagemPerfil}
+            source={require("/home/legend/git/projects/assets/adaptive-icon.png")}
+          />
+        </View>
       </View>
     )
   }
