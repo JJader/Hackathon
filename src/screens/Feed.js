@@ -38,7 +38,7 @@ export default class Feed extends Component {
         <View style={styles.flatView}>
           <FlatList
             data={Projetos}
-            renderItem={renderItem}
+            renderItem={this.renderItem}
             keyExtractor={item => String(item.id)}
           />
 
