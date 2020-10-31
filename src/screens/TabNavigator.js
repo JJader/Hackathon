@@ -13,6 +13,8 @@ import Feed from './Feed'
 import Perfil from './Perfil'
 import CriarProjeto from './CriarProjeto'
 
+import Colors from '../styles/Colors'
+
 const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -22,14 +24,14 @@ function TabNavigator() {
       barStyle={{
         backgroundColor: 'white',
         borderTopWidth:2,
-        borderColor:'red'
+        borderColor:Colors.primaryColor
         
       }}
     >
 
       <Tab.Screen
         name="CriarProjeto"
-        component={CriarProjeto}
+        component={Projetos}
         options={{
           tabBarLabel: false,
           tabBarIcon: ({ color }) => (
@@ -74,6 +76,9 @@ export default function StackNavigator() {
       <Stack.Screen
         name="Login"
         component={Login}
+        options={{
+          headerShown:false
+        }}
       />
 
       <Stack.Screen
