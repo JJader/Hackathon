@@ -21,7 +21,7 @@ const Stack = createStackNavigator();
 function StackSeeProject() {
 
   return (
-    <Stack.Navigator initialRouteName="Login">
+    <Stack.Navigator initialRouteName="SeeProject">
 
       <Stack.Screen
         name="SeeProject"
@@ -52,6 +52,7 @@ function TabNavigator() {
         borderColor: Colors.primaryColor
 
       }}
+      initialRouteName="Feed"
     >
 
       <Tab.Screen

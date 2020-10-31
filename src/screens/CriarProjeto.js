@@ -3,8 +3,35 @@ import { Image, StatusBar, StyleSheet, Text, View, ScrollView } from 'react-nati
 import Colors from '../styles/Colors'
 import { Projetos } from '../data/Projetos'
 
-export default class CriarProjeto extends Component {
+import MoreInfoData from '../Offiline/moreInfo'
 
+export default class CriarProjeto extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: {
+        nome: '',
+        bolsa: '',
+        area: '',
+        preRequisitos: '',
+        horas: '',
+        colaboradores: '',
+        responsavel: '',
+        descricao: '',
+      }
+
+    }
+  }
+
+  async componentDidMount() {
+    console.log("Estou aqui")
+    var data = await MoreInfoData.get()
+
+    if (!data.error) {
+      this.setState({ data })
+    }
+  }
+  
   returnColab(colaboradores) {
     var str = ''
 
@@ -40,28 +67,28 @@ export default class CriarProjeto extends Component {
         </View>
 
         <View style={styles.viewText}>
-          <Text style={styles.text}>Responsavel: {Projetos[0].responsavel}</Text>
+          <Text style={styles.text}>Responsavel: {this.state.data.responsavel}</Text>
 
-          <Text style={styles.text}>{Projetos[0].nome}</Text>
+          <Text style={styles.text}>{this.state.data.nome}</Text>
 
           <Text style={styles.text}>Descrição do projeto</Text>
           <ScrollView style={styles.scrollDescription}>
-            <Text>{Projetos[0].descricao}</Text>
+            <Text>{this.state.data.descricao}</Text>
           </ScrollView>
 
-          <Text style={styles.text}>Bolsa: {Projetos[0].bolsa} </Text>
+          <Text style={styles.text}>Bolsa: {this.state.data.bolsa} </Text>
 
-          <Text style={styles.text}>Area: {Projetos[0].area} </Text>
+          <Text style={styles.text}>Area: {this.state.data.area} </Text>
 
           <Text style={styles.text}>Pre-requisitos: {
-            this.returnPreRequisitos(Projetos[0].preRequisitos)
+            this.returnPreRequisitos(this.state.data.preRequisitos)
           }
           </Text>
 
-          <Text style={styles.text}>Qtd. de horas: {Projetos[0].horas} </Text>
+          <Text style={styles.text}>Qtd. de horas: {this.state.data.horas} </Text>
 
           <Text style={styles.text}>Colaboradores: {
-            this.returnColab(Projetos[0].colaboradores)
+            this.returnColab(this.state.data.colaboradores)
           }
           </Text>
         </View>

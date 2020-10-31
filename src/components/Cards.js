@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View , TouchableOpacity} from 'react-native'
 import Colors from '../styles/Colors';
 
+import MoreInfoData from '../Offiline/moreInfo'
+
 
 function doTruncarStr(str) {
   var size = 150
@@ -17,6 +19,11 @@ function doTruncarStr(str) {
   return shortText;
 }
 
+async function clickButton(item, onPress){
+  await MoreInfoData.set(item)
+  return onPress()
+}
+
 const CardView = ({ item, onPress, style }) => (
   <View style={[styles.card,style]}>
 
@@ -26,7 +33,7 @@ const CardView = ({ item, onPress, style }) => (
       <Text style={styles.description}>{doTruncarStr(item.descricao)}</Text>
     </View>
 
-    <TouchableOpacity style={styles.informaçoes} onPress={onPress}>
+    <TouchableOpacity style={styles.informaçoes} onPress={async() => await clickButton(item,onPress)}>
       <Text style={styles.textInfo}>Mais informações</Text>
     </TouchableOpacity>
 
