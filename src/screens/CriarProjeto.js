@@ -107,7 +107,9 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 60,
     minHeight: 200,
-    minWidth: 200
+    minWidth: 200,
+    borderColor: Colors.primaryColor,
+    borderWidth: 7
   },
 
   scrollDescription: {
