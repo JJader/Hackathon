@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Button, Text, View } from 'react-native'
 
 export default class Login extends Component {
   render() {
     return (
       <View>
-        <Text> textInComponent </Text>
+        <Button
+        title="Go to Settings"
+        onPress={() => this.props.navigation.replace('Tab')}
+      />
       </View>
     )
   }
