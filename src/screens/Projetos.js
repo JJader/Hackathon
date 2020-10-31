@@ -16,7 +16,7 @@ export default class Projetos extends Component {
         <View>
           <Image
             style={styles.imagemPerfil}
-            source={require("/home/legend/git/projects/assets/adaptive-icon.png")}
+            source={require("../../assets/adaptive-icon.png")}
           />
         </View>
       </View>
