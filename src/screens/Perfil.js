@@ -11,6 +11,14 @@ export default class Perfil extends Component {
     <CardView style={{maxWidth: 327,
       marginRight: 20}} item={item} onPress={this.moreInformation} />
   )
+  returnArea(area) {
+    var str = ''
+
+    for (let i = 0; i < area.length; i++) {
+      str = str.concat(area[i] + ';   ');
+    }
+    return str
+  }
   render() {
     return (
       <View style={styles.background}>
@@ -27,7 +35,7 @@ export default class Perfil extends Component {
           </View>
 
           <Text style={styles.text}> {Usuarios[0].curso}</Text>
-          <Text style={styles.text}> {Usuarios[0].areaInteresse}</Text>
+          <Text style={styles.text}> {this.returnArea(Usuarios[0].areaInteresse)}</Text>
         </View>
 
         <View style={styles.cards}>
@@ -78,7 +86,7 @@ const styles = {
     marginBottom: 10,
     marginLeft: 0,
     fontSize: 18,
-    
+
     borderWidth: 2,
     borderColor: Colors.primaryColor,
     borderRightWidth: 0,

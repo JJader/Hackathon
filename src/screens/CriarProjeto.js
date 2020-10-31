@@ -24,6 +24,14 @@ export default class CriarProjeto extends Component {
 
     return str
   }
+  returnArea(area) {
+    var str = ''
+
+    for (let i = 0; i < area.length; i++) {
+      str = str.concat(area[i] + ';   ');
+    }
+    return str
+  }
 
   render() {
     return (
@@ -51,7 +59,7 @@ export default class CriarProjeto extends Component {
 
           <Text style={styles.text}>Bolsa: {Projetos[0].bolsa} </Text>
 
-          <Text style={styles.text}>Area: {Projetos[0].area} </Text>
+          <Text style={styles.text}>Area: {this.returnArea(Projetos[0].area)} </Text>
 
           <Text style={styles.text}>Pre-requisitos: {
             this.returnPreRequisitos(Projetos[0].preRequisitos)
@@ -64,11 +72,9 @@ export default class CriarProjeto extends Component {
             this.returnColab(Projetos[0].colaboradores)
           }
           </Text>
+        
         </View>
 
-        <View>
-
-        </View>
       </ScrollView>
     )
   }
@@ -86,7 +92,6 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: 18,
-    fontWeight: 'bold',
     borderWidth: 2,
 
     borderRightWidth: 0,
