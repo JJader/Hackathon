@@ -5,7 +5,7 @@ const Usuarios = [
       "Eletrônica"
     ],
     "_id": "5f9cc8143be3661620d8640a",
-    "nome": "Lucas",
+    "nome": "Lucas Novais Ferreira",
     "matricula": "18.1.8046",
     "curso": "Engenharia de Computação",
     "foto": "myProfPic.jpg",
