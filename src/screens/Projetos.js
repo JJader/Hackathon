@@ -87,7 +87,7 @@ export default class CriarProjeto extends Component {
               <TextInput
               style={styles.input}
               onChangeText={text => this.onValueChange(text)}
-              value={this.state.value}
+              value4={this.state.value}
               placeholder={"Digite aqui o valor da bolsa"}
             />
           </View>
@@ -95,14 +95,14 @@ export default class CriarProjeto extends Component {
           <TextInput
               style={styles.input}
               onChangeText={text => this.onValueChange(text)}
-              value={this.state.value}
+              value5={this.state.value}
               placeholder={"Digite aqui as áreas de atuação"}
             />
 
             <TextInput
               style={styles.input}
               onChangeText={text => this.onValueChange(text)}
-              value={this.state.value}
+              value6={this.state.value}
               placeholder={"Digite aqui os pré-requisitos do projeto"}
             />
            <View style={styles.viewaux}>  
@@ -110,14 +110,14 @@ export default class CriarProjeto extends Component {
               <TextInput
               style={styles.input}
               onChangeText={text => this.onValueChange(text)}
-              value={this.state.value}
+              value7={this.state.value}
               placeholder={"Digite aqui o valor da bolsa"}
             />
            </View>
            <TextInput
               style={styles.input}
               onChangeText={text => this.onValueChange(text)}
-              value={this.state.value}
+              value8={this.state.value}
               placeholder={"Digite aqui quem são os colaboradores"}
             />
         </View>
