@@ -26,7 +26,7 @@ const CardView = ({ item, onPress }) => (
       <Text style={styles.description}>{doTruncarStr(item.descricao)}</Text>
     </View>
 
-    <TouchableOpacity style={styles.informaçoes} onPress={onPress}>
+    <TouchableOpacity style={styles.informaçoes}>
       <Text style={styles.textInfo}>Mais informações</Text>
     </TouchableOpacity>
 

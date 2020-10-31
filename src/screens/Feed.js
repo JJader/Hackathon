@@ -9,7 +9,8 @@ export default class Feed extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
+      value: '',
+      index:0
     };
   }
 
@@ -17,10 +18,10 @@ export default class Feed extends Component {
     this.setState({ value })
   }
 
-  moreInformation = () => this.props.navigation.navigate('Projetos');
+  moreInformation = (item) => this.props.navigation.navigate('Projetos', {item});
 
-  renderItem = ({ item }) => (
-    <CardView item={item} onPress={this.moreInformation} />
+  renderItem = ({ item,index }) => (
+    <CardView item={item} index={index} onPress={this.moreInformation} />
   )
 
   render() {
