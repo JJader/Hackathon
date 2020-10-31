@@ -17,7 +17,7 @@ export default class Feed extends Component {
     this.setState({ value })
   }
 
-  moreInformation = () => this.props.navigation.navigate('Projetos');
+  moreInformation = () => this.props.navigation.navigate('Projetos',{entrei:true});
 
   renderItem = ({ item }) => (
     <CardView item={item} onPress={this.moreInformation} />

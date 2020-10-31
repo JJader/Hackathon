@@ -12,12 +12,12 @@ export default class Login extends Component {
     };
   }
 
-  onUserChange(user){
-    this.setState({user})
+  onUserChange(user) {
+    this.setState({ user })
   }
 
-  onPassChange(password){
-    this.setState({password})
+  onPassChange(password) {
+    this.setState({ password })
   }
 
   render() {
@@ -25,14 +25,13 @@ export default class Login extends Component {
       <View style={styles.background}>
         <StatusBar hidden />
 
-        <KeyboardAvoidingView style={{ flex: 3 }} behavior="padding" enabled>
+        <KeyboardAvoidingView style={{ flex: 4 }} behavior="padding" enabled>
 
           <View style={styles.imagemView}>
             <Image
               style={styles.image}
-              source={{
-                uri: 'https://reactnative.dev/img/tiny_logo.png',
-              }}
+              resizeMode={"contain"}
+              source={require('../../assets/logo.png')}
             />
           </View>
 
@@ -107,12 +106,12 @@ const styles = StyleSheet.create({
   },
 
   imagemView: {
-    flex: 1.5,
+    justifyContent:"space-around",
+    alignItems:'center',
+    flex: 2,
   },
 
   image: {
-    borderRadius: 400,
-    flex: 1,
-    margin: 60
+    flex: 0.7,
   }
 })
