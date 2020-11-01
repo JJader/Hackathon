@@ -7,7 +7,7 @@ const Usuarios = [
     "_id": "5f9cc8143be3661620d8640a",
     "nome": "Lucas Novais Ferreira",
     "matricula": "18.1.8046",
-    "curso": "Engenharia de Computação",
+    "curso": "Engenharia de produxota",
     "foto": '../../assets/brad.png',
     "Projeto": [
       {

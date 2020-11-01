@@ -6,15 +6,22 @@ import { Projetos } from '../data/Projetos'
 import { Usuarios } from '../data/Usuarios'
 
 export default class Perfil extends Component {
-
-  moreInformation = () => this.props.navigation.navigate('Projetos');
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '',
+      
+    };
+  }
+  moreInformation = () => this.props.navigation.navigate('Projetos', { entrei: true });
+  
   renderItem = ({ item }) => (
     <CardView style={{
       maxWidth: 327,
       marginRight: 20
     }} item={item} onPress={this.moreInformation} />
   )
+
 
   returnArea(area) {
     var str = ''

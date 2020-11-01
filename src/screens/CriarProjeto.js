@@ -54,7 +54,7 @@ export default class CriarProjeto extends Component {
     var str = ''
 
     for (let i = 0; i < area.length; i++) {
-      str = str.concat(area[i] + ';   ');
+      str = str.concat(area[i] + '; ');
     }
     return str
   }
@@ -72,30 +72,31 @@ export default class CriarProjeto extends Component {
         </View>
 
         <View style={styles.viewText}>
-          <Text style={styles.text}>Responsavel: {this.state.data.responsavel}</Text>
+          <Text style={styles.text}>Responsavel: <Text style={styles.text2}>{this.state.data.responsavel}</Text> </Text>
 
           <Text style={styles.text}>{this.state.data.nome}</Text>
 
-          <Text style={styles.text}>Descrição do projeto</Text>
+          <Text style={[styles.text,{borderWidth: 0, marginVertical: 0}]}>Descrição do projeto</Text>
           <ScrollView style={styles.scrollDescription}>
-            <Text>{this.state.data.descricao}</Text>
+            <Text style={[styles.text,{fontSize: 18, lineHeight: 27}]}>{this.state.data.descricao}</Text>
           </ScrollView>
 
-          <Text style={styles.text}>Bolsa: {this.state.data.bolsa} </Text>
+          <Text style={styles.text}>Bolsa: <Text style={styles.text2}>{this.state.data.bolsa}</Text> </Text>
 
 
-          <Text style={styles.text}>Area: {this.state.data.area} </Text>
+          <Text style={styles.text}>Area: <Text style={styles.text2}>{this.returnArea(this.state.data.area)}</Text> </Text>
 
-          <Text style={styles.text}>Pre-requisitos: {
+          <Text style={styles.text}>Pre-requisitos: <Text style={styles.text2}>{
             this.returnPreRequisitos(this.state.data.preRequisitos)
-          }
+          }</Text>
           </Text>
 
-          <Text style={styles.text}>Qtd. de horas: {this.state.data.horas} </Text>
+          <Text style={styles.text}>Qtd. de horas: <Text style={styles.text2}>{this.state.data.horas}</Text> </Text>
 
-          <Text style={styles.text}>Colaboradores: {
+          <Text style={styles.text}>Colaboradores: <Text style={styles.text2}>{
             this.returnColab(this.state.data.colaboradores)
           }
+          </Text>
           </Text>
         
         </View>
@@ -117,7 +118,9 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    fontSize: 18,
+    
+    color: Colors.darkGrey,
+    fontSize: 22,
     borderWidth: 2,
 
     borderRightWidth: 0,
@@ -125,8 +128,14 @@ const styles = StyleSheet.create({
     borderTopWidth: 0,
     borderColor: Colors.primaryColor,
 
-    marginVertical: 15,
+    marginVertical: 20,
+    paddingVertical: 5,
 
+  },
+  text2: {
+    fontSize: 18,
+    lineHeight: 23,
+  
   },
 
   imagemView: {

@@ -16,7 +16,7 @@ const Projetos = [
     "tipo": "Projeto de núcleo",
     "responsavel": "LocoBots",
     "horas": 10,
-    "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem",
+    "descricao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry 1998. Lorem Ipsum has been the industry's 24.000 standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem",
     "colaboradores": [
       {
         "_id": "5f9cc9c1cba0e752640cf14c",
@@ -70,7 +70,7 @@ const Projetos = [
     "__v": 0
   },
   {
-    "bolsa": 0,
+    "bolsa": 600,
     "area": [
       "Programação",
       "Visão computacional"
