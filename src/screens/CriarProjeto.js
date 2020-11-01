@@ -108,7 +108,8 @@ export default class CriarProjeto extends Component {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    marginHorizontal: 20
+    paddingHorizontal: 20,
+    backgroundColor: 'white',
   },
 
   viewText: {
@@ -124,7 +125,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 0,
     borderColor: Colors.primaryColor,
 
-    marginVertical: 8,
+    marginVertical: 15,
 
   },
 

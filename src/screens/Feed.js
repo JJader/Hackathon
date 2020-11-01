@@ -5,11 +5,26 @@ import Colors from '../styles/Colors'
 import { Projetos } from '../data/Projetos'
 import CardView from '../components/Cards'
 
+import projetosFeed from '../Offiline/projetosFeed'
+
 export default class Feed extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
+      value: '',
+      data: [
+        {
+          value: '',
+          nome: '',
+          bolsa: '',
+          area: '',
+          preRequisitos: '',
+          horas: '',
+          colaboradores: '',
+          responsavel: '',
+          descricao: '',
+        }
+      ]
     };
   }
 
@@ -17,11 +32,19 @@ export default class Feed extends Component {
     this.setState({ value })
   }
 
-  moreInformation = () => this.props.navigation.navigate('Projetos',{entrei:true});
+  moreInformation = () => this.props.navigation.navigate('Projetos', { entrei: true });
 
   renderItem = ({ item }) => (
     <CardView item={item} onPress={this.moreInformation} />
   )
+
+  async componentDidMount() {
+    var data = await projetosFeed.set(Projetos)
+
+    if (!data.error) {
+      this.setState({ data })
+    }
+  }
 
   render() {
     return (
@@ -32,7 +55,7 @@ export default class Feed extends Component {
           style={styles.input}
           onChangeText={text => this.onValueChange(text)}
           value={this.state.value}
-          placeholder={"PESQUISAR"}
+          placeholder={"Pesquise áreas de interesse"}
         />
 
         <View style={styles.flatView}>
@@ -52,8 +75,9 @@ export default class Feed extends Component {
 const styles = StyleSheet.create({
 
   background: {
+    backgroundColor: 'white',
     flex: 1,
-    marginHorizontal: 10,
+    paddingHorizontal: 10,
     marginTop: 10,
   },
 

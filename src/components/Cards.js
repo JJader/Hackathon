@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   textView: {
     flex: 5,
     paddingHorizontal: 20,
-    justifyContent: "space-around",
+    justifyContent: "flex-start",
     marginBottom:10,
   },
 
