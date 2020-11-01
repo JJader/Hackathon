@@ -24,7 +24,6 @@ export default class CriarProjeto extends Component {
   }
 
   async componentDidMount() {
-    console.log("Estou aqui")
     var data = await MoreInfoData.get()
 
     if (!data.error) {
@@ -68,9 +67,7 @@ export default class CriarProjeto extends Component {
         <View style={styles.imagemView}>
           <Image
             style={styles.image}
-            source={{
-              uri: 'https://reactnative.dev/img/tiny_logo.png',
-            }}
+            source={require('../../assets/user.png')}
           />
         </View>
 

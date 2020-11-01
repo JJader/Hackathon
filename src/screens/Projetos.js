@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Image, StatusBar, StyleSheet, Text, View, ScrollView, TextInput } from 'react-native'
 import Colors from '../styles/Colors'
-import { Projetos } from '../data/Projetos'
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
+import { Ionicons } from '@expo/vector-icons';
 
 export default class CriarProjeto extends Component {
   constructor(props) {
@@ -50,80 +52,80 @@ export default class CriarProjeto extends Component {
         <View style={styles.imagemView}>
           <Image
             style={styles.image}
-            source={{
-              uri: 'https://reactnative.dev/img/tiny_logo.png',
-            }}
+            source={require('../../assets/user.png')}
           />
         </View>
 
         <View style={styles.viewText}>
-           
-            <View style={styles.viewaux}>  
-              <Text style={styles.text}>Responsavel: </Text>
-              <TextInput
-              style={styles.input}
-              onChangeText={text => this.onValueChange(text)}
-              value1={this.state.value}
-              placeholder={"Digite aqui"}
-            />
-          </View>
+
 
           <TextInput
-              style={styles.input}
-              onChangeText={text => this.onValueChange(text)}
-              value2={this.state.value}
-              placeholder={"Digite aqui o nome do projeto"}
-            />
-          <Text style={styles.text}>Descrição do projeto</Text>
-          <TextInput
-              style={{paddingVertical: 50, fontSize: 18}}
-              onChangeText={text => this.onValueChange(text)}
-              value3={this.state.value}
-              placeholder={"Digite aqui a descrição do projeto"}
-            />
-
-            <View style={styles.viewaux}>  
-            <Text style={styles.text}>Bolsa: </Text>
-              <TextInput
-              style={styles.input}
-              onChangeText={text => this.onValueChange(text)}
-              value4={this.state.value}
-              placeholder={"Digite aqui o valor da bolsa"}
-            />
-          </View>
+            style={styles.input}
+            onChangeText={text => this.onValueChange(text)}
+            value1={this.state.value}
+            placeholder={"Responsavel: "}
+          />
 
           <TextInput
-              style={styles.input}
-              onChangeText={text => this.onValueChange(text)}
-              value5={this.state.value}
-              placeholder={"Digite aqui as áreas de atuação"}
-            />
+            style={styles.input}
+            onChangeText={text => this.onValueChange(text)}
+            value2={this.state.value}
+            placeholder={"Nome do projeto"}
+          />
 
-            <TextInput
-              style={styles.input}
-              onChangeText={text => this.onValueChange(text)}
-              value6={this.state.value}
-              placeholder={"Digite aqui os pré-requisitos do projeto"}
-            />
-           <View style={styles.viewaux}>  
-              <Text style={styles.text}>Qtd. de horas: </Text>
-              <TextInput
-              style={styles.input}
-              onChangeText={text => this.onValueChange(text)}
-              value7={this.state.value}
-              placeholder={"Digite aqui o valor da bolsa"}
-            />
-           </View>
-           <TextInput
-              style={styles.input}
-              onChangeText={text => this.onValueChange(text)}
-              value8={this.state.value}
-              placeholder={"Digite aqui quem são os colaboradores"}
-            />
+          <TextInput
+            style={styles.scrollDescription}
+            onChangeText={text => this.onValueChange(text)}
+            value3={this.state.value}
+            placeholder={"Descrição"}
+          />
+
+
+          <TextInput
+            style={styles.input}
+            onChangeText={text => this.onValueChange(text)}
+            value4={this.state.value}
+            placeholder={"Valor da Bolsa:"}
+          />
+
+          <TextInput
+            style={styles.input}
+            onChangeText={text => this.onValueChange(text)}
+            value5={this.state.value}
+            placeholder={"Áreas de atuação"}
+          />
+
+          <TextInput
+            style={styles.input}
+            onChangeText={text => this.onValueChange(text)}
+            value6={this.state.value}
+            placeholder={"Pré-requisitos"}
+          />
+
+          <TextInput
+            style={styles.input}
+            onChangeText={text => this.onValueChange(text)}
+            value7={this.state.value}
+            placeholder={"Qtd. de horas: "}
+          />
+
+          <TextInput
+            style={styles.input}
+            onChangeText={text => this.onValueChange(text)}
+            value8={this.state.value}
+            placeholder={"Digite aqui quem são os colaboradores"}
+          />
+
         </View>
-        <View>
-      </View>
-    </ScrollView>
+
+        <TouchableOpacity
+          onPress={() => this.props.navigation.replace('Tab')}
+          style={styles.button}
+        >
+          <Ionicons name="ios-add-circle" size={60} color="black" />
+        </TouchableOpacity>
+
+      </ScrollView>
     )
   }
 }
@@ -138,31 +140,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  text: {
-    fontSize: 18,
-    borderWidth: 2,
-
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderTopWidth: 0,
-    borderColor: Colors.primaryColor,
-    marginVertical: 8,
-
-
-  },
-  input:{
+  input: {
     flex: 1,
     fontSize: 18,
     borderWidth: 2,
+    marginBottom: 15,
 
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderTopWidth: 0,
     borderColor: Colors.primaryColor,
-  },
-  viewaux:{
-    flexDirection: 'row',
-    alignItems: 'center',
   },
 
   imagemView: {
@@ -178,6 +165,16 @@ const styles = StyleSheet.create({
   },
 
   scrollDescription: {
-    minHeight: 150,
-  }
+    paddingVertical: 50,
+    fontSize: 18
+  },
+
+  button: {
+    flex: 1,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 20,
+    marginHorizontal: 40,
+  },
 })

@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     flex: 1,
     maxHeight: 60,
-    paddingLeft: 20
+    paddingLeft: 20,
   },
 
   button: {

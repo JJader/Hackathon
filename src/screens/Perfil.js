@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
-import { StatusBar, Text, View, FlatList, Image, ScrollView} from 'react-native'
+import { StatusBar, Text, View, FlatList, Image, ScrollView, StyleSheet } from 'react-native'
 import Colors from '../styles/Colors'
 import CardView from '../components/Cards'
 import { Projetos } from '../data/Projetos'
 import { Usuarios } from '../data/Usuarios'
 
 export default class Perfil extends Component {
+
   moreInformation = () => this.props.navigation.navigate('Projetos');
+
   renderItem = ({ item }) => (
-    <CardView style={{maxWidth: 327,
-      marginRight: 20}} item={item} onPress={this.moreInformation} />
+    <CardView style={{
+      maxWidth: 327,
+      marginRight: 20
+    }} item={item} onPress={this.moreInformation} />
   )
+
   returnArea(area) {
     var str = ''
 
@@ -19,28 +24,31 @@ export default class Perfil extends Component {
     }
     return str
   }
+
   render() {
     return (
-      <View style={styles.background}>
+      <ScrollView style={styles.background}>
         <StatusBar backgroundColor={Colors.primaryColor} />
-        <View style={styles.image}>
-        <Image style={{padding: 60}} source={require('../../assets/favicon.png')}/>
+
+        <View style={styles.imageView}>
+          <Image style={styles.image} source={require('../../assets/user.png')} />
         </View>
 
         <View style={styles.infos}>
-          
-          <View style={{alignItems: 'space-between', flexDirection: 'row'}}>
-          <Text style={styles.text}> {Usuarios[0].nome.substring(0,12)}</Text>
-          <Text style={styles.text}>{Usuarios[0].matricula}</Text>
+
+          <View style={styles.ButtonText}>
+            <Text style={[styles.text, {flex: 2}]}>{Usuarios[0].nome.substring(0, 12)}</Text>
+            <Text style={styles.text}>{Usuarios[0].matricula}</Text>
           </View>
 
-          <Text style={styles.text}> {Usuarios[0].curso}</Text>
-          <Text style={styles.text}> {this.returnArea(Usuarios[0].areaInteresse)}</Text>
+          <Text style={styles.text}>{Usuarios[0].curso}</Text>
+          <Text style={styles.text}>{this.returnArea(Usuarios[0].areaInteresse)}</Text>
+
         </View>
 
         <View style={styles.cards}>
           <FlatList
-            horizontal  //mudar linha 66 Perfil.js e linha 64/65 Cards.js
+            horizontal
             showsHorizontalScrollIndicator={false}
             showsVerticalScrollIndicator={false}
             data={Projetos}
@@ -48,43 +56,56 @@ export default class Perfil extends Component {
             keyExtractor={item => String(item.id)}
           />
         </View>
-      </View>
+      </ScrollView>
     )
   }
 }
-const styles = {
-  flatView: {
-    flex: 1,
+const styles = StyleSheet.create({
+  
+  ButtonText: {
+    flex:1,
+    flexDirection: 'row',
+    alignContent: 'space-between'
   },
+
   background: {
     flex: 1,
-    marginHorizontal: 10,
-    marginTop: 10,
   },
-  image: {
-    flex: 1.3,
-    paddingVertical: 30,
+
+  imageView: {
     alignItems: 'center',
+    marginVertical: 20,
   },
+
+  image: {
+    borderRadius: 400,
+    flex: 1,
+    minHeight: 200,
+    minWidth: 200,
+    borderColor: Colors.primaryColor,
+    borderWidth: 7
+  },
+
   infos: {
     flex: 1,
     alignItems: 'stretch',
     marginHorizontal: 25,
-  
+
   },
+
   cards: {
     flex: 2,
     marginTop: 50,
-    paddingVertical: 8, 
+    paddingVertical: 8,
     alignItems: 'center',
     paddingHorizontal: 24,
-    paddingRight: 5,   //caso sejam cards horizontais
+    paddingRight: 5,
   },
-  text:{
+
+  text: {
     flex: 1,
     paddingLeft: 10,
     marginBottom: 10,
-    marginLeft: 0,
     fontSize: 18,
 
     borderWidth: 2,
@@ -93,4 +114,4 @@ const styles = {
     borderLeftWidth: 0,
     borderTopColor: "transparent",
   }
-}
+})

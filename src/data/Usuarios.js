@@ -34,7 +34,7 @@ const Usuarios = [
     "nome": "Carlos",
     "matricula": "18.1.9999",
     "curso": "Sistemas de Informação",
-    "foto": "myProfPic2.jpg",
+    "foto": "../../assets/user.png",
     "Projeto": [
       {
         "_id": "5f9ccb917d59ef5518665fbe",
