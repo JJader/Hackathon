@@ -21,25 +21,22 @@
 
 </div>
 
-<div style="text-align:justify; margin-top:40px" >
+<div align="left" style="text-align:justify; margin-top:40px" >
+
+<br>
 
 Suas experiências são muito importante para o mercado de trabalho. Portanto, nada melhor para adquirir experiência durante a graduação do que a participação em projetos. Porém, qual projeto escolher? Onde encontrar? Quais pessoas estão envolvidas nos trabalhos? 🤔
 
-<br>
-<p align="center">Com o Pinça.me a busca por oportunidades se tornará algo simples<p> 
-<br>
-
+<p align="center">Com o Pinça.me a busca por oportunidades se tornará algo simples</p> 
 
 O Pinça.me é uma aplicação móvel que ajudará a reunir idealizadores e colaboradores em um único ambiente, democratizando o acesso a projetos.
 
-Espera-se que, ao reunir diversos projetos - sejam eles: iniciação científica, projetos de extensão, núcleo de atividades, empresas juniores, laboratórios e até mesmo projetos pessoais - ocorra um maior engajamento entre universitários e atividades extracurriculares. E o melhor : evitando a confusão gerada pelas maneiras tradicionais de divulgar ou encontrar uma atividade extracurricular dentro da universidade.
+Espera-se que, ao reunir diversos projetos - sejam eles: iniciação científica, projetos de extensão, núcleo de atividades, empresas juniores, laboratórios e até mesmo projetos pessoais - ocorra um maior engajamento entre universitários e atividades extracurriculares. E o melhor: evitando a confusão gerada pelas maneiras tradicionais de divulgar ou encontrar iniciativas dentro da universidade.
 
 > Tudo isso, na era IoT, possibilita o levantamento dos principais pontos de pesquisa em determinadas áreas.
 
 <br>
 <hr/>
-<br>
-
 
 ## ⚙️ Funcionalidades
 
@@ -53,10 +50,6 @@ Desenvolvido no Hackathon promovido pela [Semana da Engenharia de Computação (
   
   - [x] Buscar colaboradores e parceiros para seus projetos, sejam eles acadêmicos ou pessoais.
 
-<br>
-<hr/>
-<br>
-
 ## 🛠️ Construído com
 
 * Front end 
@@ -67,10 +60,6 @@ Desenvolvido no Hackathon promovido pela [Semana da Engenharia de Computação (
   * [Node.js](https://nodejs.org/en/) - Gerador de mobility scenarios;
   * [Express.js](https://expressjs.com/pt-br/) - Gerador de mobility scenarios;
   * [mongodb](https://www.mongodb.com/) - Gerador de mobility scenarios;
-
-<br>
-<hr/>
-<br>
 
 ## 📋 Pré-requisitos
 
@@ -84,10 +73,6 @@ Para isso basta seguir a documentação do React Native [nesse link](https://rea
 Alem disson:
   - Ter o app da expo instalado em seu celular android, [clique aqui](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR);
   - Ter o nosso repositório baixado em sua máquina, [clique aqui](https://github.com/JJader/Siot/archive/master.zip).
-
-<br>
-<hr/>
-<br>
 
 ## 🔧 Instalação do projeto na máquina local
 
@@ -108,9 +93,6 @@ npm install
 
 node start
 ```
-<br>
-<hr/>
-<br>
 
 ## 🧡 Autores
 
