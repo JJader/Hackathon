@@ -1,4 +1,4 @@
-# <img src = './assets/pinca.png' width=25/> PINÇA.ME - Pense no futuro, pince suas escolhas
+# <img src = './assets/pinca2.png' width=25/> PINÇA.ME - Pense no futuro, pince suas escolhas
 
 <div align="center" style="margin-top:40px;margin-bottom:40px">
   
@@ -33,33 +33,33 @@ O Pinça.me é uma aplicação móvel que ajudará a reunir idealizadores e cola
 
 Espera-se que, ao reunir diversos projetos - sejam eles: iniciação científica, projetos de extensão, núcleo de atividades, empresas juniores, laboratórios e até mesmo projetos pessoais - ocorra um maior engajamento entre universitários e atividades extracurriculares. E o melhor: evitando a confusão gerada pelas maneiras tradicionais de divulgar ou encontrar iniciativas dentro da universidade.
 
-> Tudo isso, na era IoT, possibilita o levantamento dos principais pontos de pesquisa em determinadas áreas.
+> Tudo isso, na era IoT, possibilita o levantamento dos principais pontos de pesquisa em determinadas áreas. Com sistema inteligente garantiremos que você encontre os melhores parceiros. 😉 
 
 <br>
 <hr/>
 
 ## ⚙️ Funcionalidades
 
-Desenvolvido no Hackathon promovido pela [Semana da Engenharia de Computação (SEnC)](https://senc.icmc.usp.br/hackathon/), com o Pinça.me você será capaz de:
+Desenvolvido no Hackathon da [SEnC](https://senc.icmc.usp.br/hackathon/) com o Pinça.me você será capaz de:
 
-  - [x] Ter um perfil com todos os trabalhos que você já realizou;
+  - [x] Ter um perfil com todos os trabalhos que você realiza/realizou;
 
-  - [x] Ter acesso ao Feed de projetos realizados na universidade, com informações sobre o responsável pelo projeto, a área de atuação, valor da bolsa e várias outras;
+  - [x] Ter acesso ao Feed de projetos desenvolvidos na universidade, com informações sobre o responsável pelo projeto, a área de atuação, valor da bolsa e várias outras;
   
-  - [x] Notificações de novas oportunidades de acordo com suas áreas de interesse.
+  - [x] Notificações de novas oportunidades de acordo com suas áreas de interesse;
   
   - [x] Buscar colaboradores e parceiros para seus projetos, sejam eles acadêmicos ou pessoais.
 
 ## 🛠️ Construído com
 
 * Front end 
-  * [Figma](https://www.figma.com/) - Gerador de métricas dos traces.
-  * [React native](https://reactnative.dev/) - IDE usada;
+  * [Figma](https://www.figma.com/) - Ferramenta de prototipagem;
+  * [React native](https://reactnative.dev/) - Framework;
 
 * Back end
-  * [Node.js](https://nodejs.org/en/) - Gerador de mobility scenarios;
-  * [Express.js](https://expressjs.com/pt-br/) - Gerador de mobility scenarios;
-  * [mongodb](https://www.mongodb.com/) - Gerador de mobility scenarios;
+  * [Node.js](https://nodejs.org/en/) - Ambiente de execução JS;
+  * [Express.js](https://expressjs.com/pt-br/) - Framework;
+  * [Mongodb](https://www.mongodb.com/) - Banco de dados.
 
 ## 📋 Pré-requisitos
 
@@ -68,15 +68,15 @@ Para executar o aplicativo você precisará:
   - Node
   - Expo CLI
 
-Para isso basta seguir a documentação do React Native [nesse link](https://reactnative.dev/docs/environment-setup) na aba Expo CLI Quickstart 😉.
+Para isso basta seguir a documentação do React Native [nesse link](https://reactnative.dev/docs/environment-setup) na aba Expo CLI Quickstart. 😉
 
-Alem disson:
+Alem disso:
   - Ter o app da expo instalado em seu celular android, [clique aqui](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR);
   - Ter o nosso repositório baixado em sua máquina, [clique aqui](https://github.com/JJader/Siot/archive/master.zip).
 
 ## 🔧 Instalação do projeto na máquina local
 
-Após fazer o download do repositório, entre do diretório da basta e execute o seguinte comando.
+Após fazer o download do repositório, entre do diretório da pasta e execute o seguinte comando:
 
 ```bash
 npm install
@@ -84,14 +84,14 @@ npm install
 expo start
 ```
 
-Isso irá gerar um qrCode que pode ser lido pelo aplicativo da expo.
+Isso gerará um qrCode que pode ser lido pelo aplicativo da expo.
 
 Para Executar o back end (ainda não implementado no front end) basta entrar na pasta backEnd e executar: 
 
 ```bash
 npm install
 
-node start
+npm start
 ```
 
 ## 🧡 Autores
