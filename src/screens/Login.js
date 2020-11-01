@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, TextInput, StatusBar, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Image } from 'react-native'
-
+import { AntDesign } from '@expo/vector-icons';
 import Colors from '../styles/Colors'
 
 export default class Login extends Component {
@@ -37,19 +37,20 @@ export default class Login extends Component {
 
           <View style={styles.inputView}>
             <TextInput
-              style={styles.input}
+              style={styles.inputBox}
               onChangeText={text => this.onUserChange(text)}
               value={this.state.user}
               placeholder={"Usuário"}
             />
 
             <TextInput
-              style={styles.input}
+              style={styles.inputBox}
               onChangeText={text => this.onPassChange(text)}
               value={this.state.password}
               secureTextEntry={true}
               placeholder={"Senha"}
             />
+            <Text style={styles.text}>Cadastrar</Text>
           </View>
         </KeyboardAvoidingView>
 
@@ -57,7 +58,7 @@ export default class Login extends Component {
           onPress={() => this.props.navigation.replace('Tab')}
           style={styles.button}
         >
-          <Text style={styles.text}>Entrar</Text>
+          <AntDesign name="arrowright" size={30} color="black" />
         </TouchableOpacity>
       </View>
     )
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
   },
 
-  input: {
+  inputBox: {
     borderColor: Colors.primaryColor,
     marginHorizontal: 40,
     marginVertical: 10,
@@ -91,20 +92,29 @@ const styles = StyleSheet.create({
 
   button: {
     flex: 1,
-    borderRadius: 20,
+    borderRadius: 90,
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: 20,
-    marginHorizontal: 40,
+    alignSelf: 'center',
+    marginBottom: 100,
+    minWidth: 70,
+    maxWidth: 70,
     maxHeight: 70,
   },
-
   text: {
+    flex: 1,
+    paddingHorizontal: 40,
+    fontSize: 18,
+    color: 'white',
+    paddingBottom: 0,
+  },
+
+  textInput: {
     color: Colors.lightGrey,
     fontSize: 20,
   },
-
+  
   imagemView: {
     justifyContent:"space-around",
     alignItems:'center',
@@ -112,6 +122,6 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    flex: 0.7,
+    flex: 0.4,
   }
 })
