@@ -53,7 +53,8 @@ Desenvolvido no Hackathon da [SEnC](https://senc.icmc.usp.br/hackathon/) com o P
 ## 🛠️ Construído com
 
 * Front end 
-  * [Figma](https://www.figma.com/) - Ferramenta de prototipagem;
+  * [Figma](https://www.figma.com/) - Ferramenta de prototipagem:
+    * [Acesse aqui](https://www.figma.com/file/Ibpffe1KJOl3NJ2AY5Lqsg/Untitled?node-id=0%3A1) o nosso modelo no Figma;
   * [React native](https://reactnative.dev/) - Framework;
 
 * Back end
